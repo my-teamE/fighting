@@ -27,12 +27,7 @@ Route::get('profile', [profileController::class, 'index'])->name('profile');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-<<<<<<< son
-
-
-
-=======
 # test
 Route::get("/postdata", [postDataController::class, "index"]);
 Route::post("/postdata", [postDataController::class, "post"]);
->>>>>>> local
+
