@@ -3,32 +3,19 @@
 {{-- @section('title','ECC コンミュニティ') --}}
 @section('content')
          <main>
-            @php
-            $count = 0;
-            $array=["Naoo","a","b","c","d","e","f"];
-            @endphp
             <div class="split-container">
-                    {{-- 検索 --}}
-                    <form action="#" method="POST" class="flex">
-                        <div class="relative text-center pt-2 " style="margin-left:41%">
-                            <input class="bg-gray-300 px-2 py-1 rounded-full text-black" style="width:120%" type="search" placeholder=" 検索">
-                            <button type="submit" style=" width:20px; position: absolute; top: 58%; right: -24px; transform: translateY(-50%);" class="bg-gray-300 text-black">
-                              <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </form>
                     <div class="location-contr" id="" style="padding:20px 0px">
                         <div id="location" class="text-center py-3">
                             <a href="" >
-                              <button class="bg-gray-100 hover:bg-blue-200 focus:bg-blue-300" >開発</button>
+                              <button class="bg-gray-100 hover:bg-blue-200 focus:bg-blue-300" style="border:solid rgb(69, 41, 134)">開発</button>
                               </a>
-                            <a href=""><button class="bg-gray-100 hover:bg-yellow-100 focus:bg-yellow-200">イベント</button></a>
-                            <a href=""><button class="bg-gray-100 hover:bg-blue-200 focus:bg-blue-300">WEB</button></a>
+                            <a href=""><button class="bg-gray-100 hover:bg-yellow-100 focus:bg-yellow-200" style="border:solid rgb(155, 200, 67)">イベント</button></a>
+                            <a href=""><button class="bg-gray-100 hover:bg-red-200 focus:bg-red-300" style="border:solid rgb(183, 68, 68)">WEB</button></a>
                         </div>
                         <div id="location" class="text-center py-3">
-                            <a href=""><button class="bg-gray-100 hover:bg-blue-200 focus:bg-blue-300">メンバー募集</button></a>
-                            <a href=""><button class="bg-gray-100 hover:bg-yellow-100 focus:bg-yellow-200">アイデア募集</button></a>
-                            <a href=""><button class="bg-gray-100 hover:bg-blue-200 focus:bg-blue-300">過去の制作物</button></a>
+                            <a href=""><button class="bg-gray-100 hover:bg-blue-200 focus:bg-blue-300"style="border:solid rgb(69, 41, 134)">メンバー募集</button></a>
+                            <a href=""><button class="bg-gray-100 hover:bg-yellow-100 focus:bg-yellow-200"style="border:solid rgb(155, 200, 67)">アイデア募集</button></a>
+                            <a href=""><button class="bg-gray-100 hover:bg-red-200 focus:bg-red-300"style="border:solid  rgb(183, 68, 68)">過去の制作物</button></a>
                         </div>
                    </div>
 
@@ -56,13 +43,27 @@
                     </div>
                 </div>
             </div>
-            <h4 class="title" style="font-size:30px;padding:2%">Project </h4>
+            <div class="flex">
+            <h4 class="title" style="font-size:30px;padding:2% 0;width:30%">Project </h4>
+             {{-- 検索 --}}
+             <div class="relative text-end pt-6 " style="width:70%;">
+                <input class="bg-gray-300 px-3 py-1.5 focus:outline-none focus:ring-red-500 focus:border-red-500 rounded-l-full text-black " style="width:36%" type="search" placeholder="検索">
+                {{-- <input class="border border-gray-300 rounded-md py-2 px-4 pr-10 focus:outline-none focus:ring-blue-500 focus:border-blue-500" style="width:35%" type="search" placeholder=" 検索"> --}}
+                <button id="searchbt" style="" class="bg-blue-300 text-white w-10 py-1.5">
+                  <i class="fa fa-search"></i>
+                </button>
+            </div>
+            </div>
     <section class="grid grid-cols-1 lg:grid-cols-4 gap-2 " id="view-index">
+        @php
+        $count = 0;
+        $array=["Naoo","a","b","c","d","e","f","abc"];
+        @endphp
         @for ($i = 0; $i < count($array); $i++)
         <!-- 一覧画面 -->
-            <article class="photo-list row-span-2 bg-shadow-300 hover:bg-black-300 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <article class="photo-list row-span-2 bg-black-300 hover:bg-black-300 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <a href="{{route("toppage.create") }}" class="photo-link ">
-
+                    {{-- {{route("toppage.show .$id") }}  --}}
                     <img
                         class="photo-thumb photo-1 "
                         data-content="1"
@@ -71,10 +72,12 @@
                         height="360"
                         alt="button-open"/>
                         <div class="photo-meta ">
-                            <p class="title  " style="font-size: 20px">Project : {{$array[$i]}} </p>
-                            <p class="title text-l ">user name</p>
+                            <p class="title text-yellow-500 text-2xl ">Project : {{$array[$i]}} </p>
+                            <p class="user text-lg pl-2">user name</p>
                         </div>
+                        <p class="text-gray-400 text-xs text-end pr-6"><time datetime="投稿記事の⽇時">2023/07/26</time></p>
                 </a>
+
             </article>
             @php
                 $count++;
