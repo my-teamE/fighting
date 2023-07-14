@@ -46,13 +46,13 @@
             <div class="flex">
             <h4 class="title" style="font-size:30px;padding:2% 0;width:30%">Project </h4>
              {{-- 検索 --}}
-             <div class="relative text-end pt-6 " style="width:70%;">
-                <input class="bg-gray-300 px-3 py-1.5 focus:outline-none focus:ring-red-500 focus:border-red-500 rounded-l-full text-black " style="width:36%" type="search" placeholder="検索">
-                {{-- <input class="border border-gray-300 rounded-md py-2 px-4 pr-10 focus:outline-none focus:ring-blue-500 focus:border-blue-500" style="width:35%" type="search" placeholder=" 検索"> --}}
-                <button id="searchbt" style="" class="bg-blue-300 text-white w-10 py-1.5">
-                  <i class="fa fa-search"></i>
-                </button>
-            </div>
+                <div class="relative text-end pt-7" style="width:70%;">
+                    <input class="bg-gray-300 px-3 py-1.5 focus:outline-none focus:ring-red-500 focus:border-red-500 rounded-md text-black " style="width:36%" type="search" placeholder="検索">
+                    {{-- <input class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-black" style="width:40%" type="search" placeholder=" 検索"> --}}
+                    <button id="searchbt" class="bg-blue-300 rounded-md text-white w-10 py-1.5 ">
+                    <i class="fa fa-search"></i>
+                    </button>
+                </div>
             </div>
     <section class="grid grid-cols-1 lg:grid-cols-4 gap-2 " id="view-index">
         @php

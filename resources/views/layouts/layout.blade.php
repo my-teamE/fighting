@@ -17,8 +17,8 @@
  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
 </head>
     <body>
-        <div class="wrapper h-screen"  style="background-color:rgb(109, 106, 106);">
-                    <header class= "fixed w-full" style="background-color:rgb(126, 108, 108); z-index: 1">
+        <div class="wrapper h-screen "  style="background-color:rgb(109, 106, 106);">
+                    <header class= "fixed w-full border-b border-green-200" style="background-color:rgb(126, 108, 108); z-index: 1">
                         {{-- <div class="container  top-0 left-0 w-full bg-gray-200 p-4"> --}}
                         <div class="container mx-auto py-4 ml-30px">
                                 {{-- <h1 class="text-xl text-white mb-6" >チーム制作 - TEAM E</h1> --}}

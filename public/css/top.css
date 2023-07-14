@@ -300,6 +300,7 @@ a.btn-custom01:active:after {
 
 
 /* login page */
+
 input[type=id], input[type=password], input[type=repassword]{
   width: 100%;
   padding: 12px 20px;
@@ -312,13 +313,16 @@ input[type=id], input[type=password], input[type=repassword]{
 
 /* Set a style for all buttons */
 .hidden button {
-  background-color: #788765;
   color: white;
-  padding: 2px 15px;
-  margin-right: 5px;
-  border: solid 2px #fff100;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
   border-radius: 5px;
   cursor: pointer;
+}
+.hidden button:hover {
+    background-color: rgb(91, 72, 72);
+    color: black;
 }
 .container2 button {
   background-color: #51407f;
