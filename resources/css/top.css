@@ -308,7 +308,7 @@ input[type=id], input[type=password], input[type=repassword]{
   display: inline-block;
   box-sizing: border-box;
   color: black;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 /* Set a style for all buttons */
