@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-class ApplydataTable extends Migration
+class ProfilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,44 +14,39 @@ class ApplydataTable extends Migration
      */
     public function up()
     {
-        if (Schema::hasTable('articles')) {
+        if (Schema::hasTable('profiles')) {
             // テーブルが存在していればリターンこのif文はautocommitがonの時は必要ない
             return;
         }
 
-        Schema::create('applydata', function (Blueprint $table) {
+        Schema::create('profiles', function (Blueprint $table) {
             $table->id();
-            $table->integer('student_id');
-            $table->integer('no');
-            $table->integer('apply_user_code');
-            $table->string('status');
+            $table->integer('student_id')->unique();
+            $table->string('class');
+            $table->string('github_url')->unique();
+            $table->string('skill');
+            $table->string('comment');
             $table->timestamps();
         });
 
-        $qb = DB::table('applydata');
+        $qb = DB::table('profiles');
         $insert = [
             [
                 'id' => null,
                 'student_id' => 2220399,
-                'no' => 1,
-                'apply_user_code' => 2220415,
-                'status' => '許可'
-            ],
-            [
-                'id' => null,
-                'student_id' => 2220399,
-                'no' => 2,
-                'apply_user_code' => 2220415,
-                'status' => '拒否'
+                'class' => 'IE2A',
+                'github_url' => '2220399.github.url',
+                'skill' => 'laravel',
+                'comment' => '頑張ります'
             ],
             [
                 'id' => null,
                 'student_id' => 2220415,
-                'no' => 1,
-                'apply_user_code' => 2220399,
-                'status' => '未確認'
+                'class' => 'IE2A',
+                'github_url' => '2220415.github.url',
+                'skill' => 'java',
+                'comment' => 'よろしく'
             ]
-
         ];
         $qb->insert($insert);
     }

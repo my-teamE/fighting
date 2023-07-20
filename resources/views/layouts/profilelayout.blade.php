@@ -58,5 +58,19 @@ img{
     </div><!--/.wrapper-->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/top.js') }}"></script>
+    <script>
+        const edit=document.getElementById("editbt");
+        console.log(edit);
+        var profile_edit = document.querySelector(".profile-edit");
+        profile_edit.hidden=true;
+        edit.addEventListener('click', function() {
+            var profile = document.querySelector(".profile");
+            console.log(profile);
+            profile.hidden= true;
+            var profile_edit = document.querySelector(".profile-edit");
+            profile_edit.hidden=false;
+        });
+    </script>
+
 
 </body>

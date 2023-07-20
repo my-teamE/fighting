@@ -14,11 +14,11 @@
                 <div>
                 <img class="photo-detail photo-1" src="{{url('/images/aa.jpg')}}" alt="" />
                 <br>
-                <p class="text-lg ">開催場所：ECC専門学校</p>
-                <p class="text-lg ">日付など：xx/xx/xx</p>
+                <p class="text-lg ">開催場所：ECCコンピューター専門学校</p>
+                <p class="text-lg ">日付など：xx/xx/xx -xx/xx/xx</p>
                 </div>
-                <div class="information" style="padding: 10px 0 10px 20px">
-                    <div class="bg-yellow" >
+                <div class="information flex-wrap" style="padding: 10px 0 10px 20px">
+                    <div class="bg-yellow" style="height:70%">
                         <!-- タイトル -->
                         <p class="text-3xl" style="color:red" >計算処理</p>
                         <br>
@@ -32,7 +32,7 @@
                         </p>
                     </div>
                     <!-- 送信ボタン -->
-                    <div class="subbt" style=" position:fixed; bottom: 120px; right: 20px;">
+                    <div class="subbt text-end " style="">
                     <!-- 発注者 -->
                         <p class="client ">大窪悠也</p>
                         <a class="btn btn-custom01" href="###">

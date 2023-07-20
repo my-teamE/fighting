@@ -22,7 +22,7 @@
                         {{-- <div class="container  top-0 left-0 w-full bg-gray-200 p-4"> --}}
                         <div class="container mx-auto py-4 ml-30px">
                                 {{-- <h1 class="text-xl text-white mb-6" >チーム制作 - TEAM E</h1> --}}
-                            <a href="{{route("toppage.index")}}"><h2 class=" text-white text-center pl-50 text-5xl" style="font-family: 'Aclonica', sans-serif;"><b style="color: aqua">ECC </b>Community</h2></a>
+                            <a href="{{route("toppage")}}"><h2 class=" text-white text-center pl-50 text-5xl" style="font-family: 'Aclonica', sans-serif;"><b style="color: aqua">ECC </b>Community</h2></a>
                                 {{-- <h2 class="text-3xl text-white pl-50">@yield('title')</h2> --}}
                         </div>
                     </header>
@@ -37,22 +37,44 @@
          {{-- <script src="{{ asset('js/top.js') }}"></script> --}}
          <script>
             document.addEventListener("DOMContentLoaded", function() {
-                var searchInput = document.getElementById("search");
-
-                searchInput.addEventListener("input", function() {
-                    var searchValue = this.value.toLowerCase(); //this=searchinput
-                    var articles = document.querySelectorAll(".photo-list");
-                    articles.forEach(function(article) {
-                        var articleTitle = article.querySelector(".title").textContent.toLowerCase();
-                        if (articleTitle.includes(searchValue)) {
-                            article.style.display = "block";
-                        } else {
-                            article.style.display = "none";
-                        }
-                    });
+              var searchInput = document.getElementById("searchbt");
+              console.log(searchInput);
+              const a= document.getElementById("a");
+                a.hidden=true;
+              searchInput.addEventListener('click', function() {
+                a.hidden=false;
+                var searchValue = document.getElementById("search").value.toLowerCase();
+                var articles = document.querySelectorAll(".photo-list");
+                console.log(searchValue);
+                articles.forEach(function(article) {
+                  var articleTitle = article.querySelector(".title").textContent.toLowerCase();
+                  console.log(articleTitle);
+                  if (articleTitle.includes(searchValue)) {
+                   console.log("dung")
+                   a.hidden=true;
+                    article.style.display = "block";
+                  }else{
+                    console.log("tat")
+                      article.style.display = "none";
+                  }
+                //   if (!articleTitle.includes(searchValue)) {
+                //     document.getElementById("a");
+                //     article.style.display = "none";
+                //     const a= document.createElement("h2");
+                //     a.textContent="khong co project tren"
+                //     document.getElementById("a").append(a);
+                //   }
                 });
+                const article= document.querySelectorAll(".photo-list");
+                    console.log(article)
+                    if(!article){
+                        console.log("null1")
+                        // a.hidden=false;
+                    }
+              });
             });
-            </script>
+          </script>
+
 
 
     </body>
