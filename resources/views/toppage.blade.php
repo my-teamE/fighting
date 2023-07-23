@@ -59,10 +59,10 @@
         $count = 0;
         $array=["Naoo","a","b","c","d","e","f","abc"];
         @endphp
-        <h1 class="text-xl" id="a">検索したプロジェクトはございません！！！</h1>
+        <h1 class="text-lg" id="a">検索したプロジェクトはございません！！！</h1>
          @foreach ($eventRecords as $record)
          <!-- 一覧画面 -->
-         <article class="photo-list row-span-2 bg-black-300 hover:bg-black-300 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+         <article class="photo-list row-span-2 bg-black-900 hover:bg-black-300 rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <a href="{{ asset('/apply/'. $record->id) }}" class="photo-link ">
                 <img class="photo-thumb photo-1 "
                 src="{{ asset('/storage/postimages/' . $record->image) }}" alt="" width="640"
